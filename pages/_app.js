@@ -1,6 +1,11 @@
 import React from "react";
 import App, { Container } from "next/app";
-import { ThemeProvider } from "styled-components";
+import { createGlobalStyle } from "styled-components";
+import reset from "styled-reset";
+
+const GlobalStyle = createGlobalStyle`
+  ${reset}
+`;
 
 class PortfolioApp extends App {
   static async getInitialProps({ Component, ctx }) {
@@ -18,6 +23,7 @@ class PortfolioApp extends App {
 
     return (
       <Container>
+        <GlobalStyle />
         <Component {...pageProps} />
       </Container>
     );
