@@ -6,9 +6,7 @@ const Landing = () => {
   return (
     <>
       <Hero />
-
       <Dope />
-
       <About />
     </>
   );

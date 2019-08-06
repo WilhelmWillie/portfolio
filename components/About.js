@@ -10,6 +10,10 @@ export default () => (
       <h4>University of Southern California</h4>
       <h4>Class of 2020</h4>
       <h4>Los Angeles, CA</h4>
+
+      <Button href="https://linkedin.com/in/wilhelmwillie">LinkedIn</Button>
+      <Button href="https://github.com/wilhelmwillie">GitHub</Button>
+      <Button href="#">Resume</Button>
     </Sidebar>
 
     <Main>
@@ -27,18 +31,44 @@ export default () => (
         Feel free to contact me if you have any opportunities you'd like to
         discuss or if you just want to talk tech!
       </p>
+
+      <Skills>
+        <Skill>Node.js</Skill>
+        <Skill>React</Skill>
+        <Skill>Angular</Skill>
+      </Skills>
     </Main>
   </Section>
 );
+
+const Button = styled.a`
+  padding: 15px;
+  background: #1fde8f;
+  border-radius: 8px;
+`;
 
 const Sidebar = styled.div`
   display: flex;
   flex-basis: 30%;
   flex-direction: column;
+  padding: 0 16px;
 `;
 
 const Main = styled.div`
   display: flex;
   flex-basis: 70%;
   flex-direction: column;
+  padding: 0 16px;
+`;
+
+const Skills = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+`;
+
+const Skill = styled.div`
+  padding: 8px;
+  border-radius: 8px;
+  background-color: gray;
 `;
