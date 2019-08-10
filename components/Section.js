@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
-export default ({ children }) => (
-  <Section>
+export default ({ children, ...props }) => (
+  <Section {...props}>
     <Container>{children}</Container>
   </Section>
 );
