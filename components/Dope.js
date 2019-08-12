@@ -5,7 +5,7 @@ import Section from "./Section";
 export default () => (
   <Section column>
     <DopeContainer>
-      <DopeTitle>what do i do?</DopeTitle>
+      <DopeTitle>What do I do</DopeTitle>
       <DopeHeader>I build dope shit.</DopeHeader>
     </DopeContainer>
   </Section>
@@ -19,9 +19,15 @@ const DopeContainer = styled.div`
 
 const DopeTitle = styled.h3`
   font-size: 24px;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  font-weight: 100;
+  color: #a2a2a2;
 `;
 
 const DopeHeader = styled.h2`
   text-align: center;
-  font-size: 32px;
+  font-size: 42px;
+  color: #545454;
+  margin-top: 18px;
 `;
