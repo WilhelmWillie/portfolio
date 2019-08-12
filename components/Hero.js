@@ -57,13 +57,18 @@ const HeroViz = styled.div`
   text-align: right;
   display: flex;
   align-items: center;
+  width: 100%;
 `;
 
-const DotGridBG = styled.img``;
+const DotGridBG = styled.img`
+  margin-left: auto;
+`;
 
 const DeveloperHexagon = styled.img`
   position: absolute;
-  left: 0;
+  left: 50px;
+  top: 50%;
+  margin-top: -127px;
 `;
 
 const HeroHeader = styled.h1`
