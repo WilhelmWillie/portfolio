@@ -1,5 +1,6 @@
 import styled from "styled-components";
 
+import Text from "./Text";
 import Developer from "../assets/developer.svg";
 import DotGrid from "../assets/dot_grid.svg";
 
@@ -7,8 +8,12 @@ export default () => (
   <Hero>
     <HeroContainer>
       <HeroText>
-        <HeroHeader>Wilhelm Willie</HeroHeader>
-        <HeroSubtitle>code + design + product</HeroSubtitle>
+        <Text as="h1" size="max" isSerif>
+          Wilhelm Willie
+        </Text>
+        <Text as="h2" size="big">
+          code + design + product
+        </Text>
       </HeroText>
       <HeroViz>
         <DotGridBG src={DotGrid} />
@@ -36,6 +41,7 @@ const Hero = styled.div`
     #fc5c7d
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   border-radius: 0 0 32px 32px;
+  color: #ffffff;
 `;
 
 const HeroContainer = styled.div`
@@ -69,11 +75,6 @@ const DeveloperHexagon = styled.img`
   left: 50px;
   top: 50%;
   margin-top: -127px;
-`;
-
-const HeroHeader = styled.h1`
-  font-size: 52px;
-  color: #ffffff;
 `;
 
 const HeroSubtitle = styled.h2`
