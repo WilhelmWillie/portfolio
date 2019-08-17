@@ -1,12 +1,17 @@
 import styled from "styled-components";
 
 import Section from "./Section";
+import Text from "./Text";
 
 export default () => (
   <Section column>
     <DopeContainer>
-      <DopeTitle>What do I do</DopeTitle>
-      <DopeHeader>I build dope shit.</DopeHeader>
+      <DopeTitle tag="h3" size="medium" weight="light">
+        What do I do
+      </DopeTitle>
+      <DopeHeader tag="h2" size="large" isSerif>
+        I build dope shit.
+      </DopeHeader>
     </DopeContainer>
   </Section>
 );
@@ -17,17 +22,13 @@ const DopeContainer = styled.div`
   width: 100%;
 `;
 
-const DopeTitle = styled.h3`
-  font-size: 24px;
+const DopeTitle = styled(Text)`
   text-transform: uppercase;
-  font-family: sans-serif;
-  font-weight: 100;
   color: #a2a2a2;
 `;
 
-const DopeHeader = styled.h2`
+const DopeHeader = styled(Text)`
   text-align: center;
-  font-size: 42px;
   color: #545454;
   margin-top: 18px;
 `;

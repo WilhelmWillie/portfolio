@@ -1,15 +1,24 @@
 import styled from "styled-components";
 
 import Section from "./Section";
+import Text from "./Text";
 
 export default () => (
   <Section>
     <Sidebar>
-      <h3>Wilhelm Willie</h3>
+      <Text tag="h3" size="medium" isSerif>
+        Wilhelm Willie
+      </Text>
 
-      <h4>University of Southern California</h4>
-      <h4>Class of 2020</h4>
-      <h4>Los Angeles, CA</h4>
+      <Text tag="h4" weight="light" size="small">
+        University of Southern California
+      </Text>
+      <Text tag="h4" weight="light" size="small">
+        Class of 2020
+      </Text>
+      <Text tag="h4" weight="light" size="small">
+        Los Angeles, CA
+      </Text>
 
       <Button href="https://linkedin.com/in/wilhelmwillie">LinkedIn</Button>
       <Button href="https://github.com/wilhelmwillie">GitHub</Button>
@@ -17,11 +26,11 @@ export default () => (
     </Sidebar>
 
     <Main>
-      <h2>
-        FULL STACK ENGINEER WITH A PASSION FOR BUILDING GREAT PRODUCTS 🎉💥
-      </h2>
+      <Text tag="h2" size="big" isSerif>
+        Full stack engineer with a passion for building great products
+      </Text>
 
-      <p>
+      <Text weight="light" tag="p">
         I'm a tinkerer, a creative, and a builder. I enjoy working across the
         stack to produce great digital experiences from concept to production.
         I'm always down to talk about code, design, and product. Currently, I'm
@@ -30,7 +39,7 @@ export default () => (
         mockups in Sketch and building them out using my favorite frameworks!
         Feel free to contact me if you have any opportunities you'd like to
         discuss or if you just want to talk tech!
-      </p>
+      </Text>
 
       <Skills>
         <Skill>Node.js</Skill>

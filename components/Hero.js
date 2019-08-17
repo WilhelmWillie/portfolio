@@ -8,10 +8,10 @@ export default () => (
   <Hero>
     <HeroContainer>
       <HeroText>
-        <Text as="h1" size="max" isSerif>
+        <Text tag="h1" size="max" isSerif>
           Wilhelm Willie
         </Text>
-        <Text as="h2" size="big">
+        <Text tag="h2" size="big">
           code + design + product
         </Text>
       </HeroText>
@@ -75,11 +75,4 @@ const DeveloperHexagon = styled.img`
   left: 50px;
   top: 50%;
   margin-top: -127px;
-`;
-
-const HeroSubtitle = styled.h2`
-  font-size: 36px;
-  color: #ffffff;
-  font-family: sans-serif;
-  font-weight: 200;
 `;

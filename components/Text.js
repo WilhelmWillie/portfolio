@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
-export default ({ tag, size, weight, isSerif, children }) => {
+export default ({ tag, size, weight, isSerif, children, ...props }) => {
   return (
-    <Text as={tag} size={size} weight={weight} isSerif={isSerif}>
+    <Text as={tag} size={size} weight={weight} isSerif={isSerif} {...props}>
       {children}
     </Text>
   );

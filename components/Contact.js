@@ -1,6 +1,10 @@
+import Section from "./Section";
+import Text from "./Text";
+
 export default () => (
-  <div>
-    <h2>Like what you see?</h2>
-    <p>Hit me up: wwillie@usc.edu -- let's talk</p>
-  </div>
+  <Section>
+    <Text tag="h2" size="large" isSerif>
+      Like what you see? Let's talk.
+    </Text>
+  </Section>
 );
