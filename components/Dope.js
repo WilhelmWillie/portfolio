@@ -4,7 +4,7 @@ import Section from "./Section";
 import Text from "./Text";
 
 export default () => (
-  <Section column>
+  <Section>
     <DopeContainer>
       <DopeTitle tag="h3" size="medium" weight="light">
         What do I do
