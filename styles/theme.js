@@ -7,13 +7,18 @@ const theme = {
     small: "16px",
     default: "18px",
     medium: "24px",
-    big: "36px",
+    big: "32px",
+    huge: "36px",
     large: "42px",
     max: "52px"
   },
   fontWeight: {
     light: "300",
     default: "400"
+  },
+  color: {
+    gray: "#545454",
+    white: "#FFFFFF"
   }
 };
 

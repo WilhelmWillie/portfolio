@@ -8,10 +8,10 @@ export default () => (
   <Hero>
     <HeroContainer>
       <HeroText>
-        <Text tag="h1" size="max" isSerif>
+        <Text tag="h1" size="max" isSerif color="white">
           Wilhelm Willie
         </Text>
-        <Text tag="h2" size="big">
+        <Text tag="h2" size="big" weight="light" color="white">
           code + design + product
         </Text>
       </HeroText>
@@ -41,7 +41,6 @@ const Hero = styled.div`
     #fc5c7d
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   border-radius: 0 0 32px 32px;
-  color: #ffffff;
 `;
 
 const HeroContainer = styled.div`

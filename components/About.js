@@ -3,34 +3,36 @@ import styled from "styled-components";
 import Section from "./Section";
 import Text from "./Text";
 
+import headshot from "../assets/headshot.jpg";
+
 export default () => (
   <Section>
     <Sidebar>
-      <Text tag="h3" size="medium" isSerif>
+      <div>
+        <Headshot src={headshot} />
+      </div>
+
+      <Name tag="h3" size="medium" isSerif>
         Wilhelm Willie
-      </Text>
+      </Name>
 
-      <Text tag="h4" weight="light" size="small">
-        University of Southern California
-      </Text>
-      <Text tag="h4" weight="light" size="small">
-        Class of 2020
-      </Text>
-      <Text tag="h4" weight="light" size="small">
-        Los Angeles, CA
-      </Text>
-
-      <Button href="https://linkedin.com/in/wilhelmwillie">LinkedIn</Button>
-      <Button href="https://github.com/wilhelmwillie">GitHub</Button>
-      <Button href="#">Resume</Button>
+      <Detail tag="h4" weight="light" size="small">
+        🎓 University of Southern California
+      </Detail>
+      <Detail tag="h4" weight="light" size="small">
+        📌 Los Angeles, CA
+      </Detail>
+      <Detail tag="h4" weight="light" size="small">
+        ⏰ Class of 2020
+      </Detail>
     </Sidebar>
 
     <Main>
-      <Text tag="h2" size="big" isSerif>
+      <BlurbTitle tag="h2" size="big" isSerif>
         Full stack engineer with a passion for building great products
-      </Text>
+      </BlurbTitle>
 
-      <Text weight="light" tag="p">
+      <Blurb weight="light" tag="p">
         I'm a tinkerer, a creative, and a builder. I enjoy working across the
         stack to produce great digital experiences from concept to production.
         I'm always down to talk about code, design, and product. Currently, I'm
@@ -39,13 +41,7 @@ export default () => (
         mockups in Sketch and building them out using my favorite frameworks!
         Feel free to contact me if you have any opportunities you'd like to
         discuss or if you just want to talk tech!
-      </Text>
-
-      <Skills>
-        <Skill>Node.js</Skill>
-        <Skill>React</Skill>
-        <Skill>Angular</Skill>
-      </Skills>
+      </Blurb>
     </Main>
   </Section>
 );
@@ -61,6 +57,7 @@ const Sidebar = styled.div`
   flex-basis: 30%;
   flex-direction: column;
   padding: 0 16px;
+  text-align: center;
 `;
 
 const Main = styled.div`
@@ -70,14 +67,26 @@ const Main = styled.div`
   padding: 0 16px;
 `;
 
-const Skills = styled.div`
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+const Headshot = styled.img`
+  border-radius: 50%;
+  width: 100%;
+  height: auto;
 `;
 
-const Skill = styled.div`
-  padding: 8px;
-  border-radius: 8px;
-  background-color: gray;
+const Name = styled(Text)`
+  margin: 16px 0;
+`;
+
+const Detail = styled(Text)`
+  margin-bottom: 16px;
+  text-align: left;
+`;
+
+const BlurbTitle = styled(Text)`
+  line-height: 1.25em;
+  margin-bottom: 12px;
+`;
+
+const Blurb = styled(Text)`
+  line-height: 1.56em;
 `;

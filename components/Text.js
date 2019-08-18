@@ -9,6 +9,8 @@ export default ({ tag, size, weight, isSerif, children, ...props }) => {
 };
 
 const Text = styled.div`
+  color: ${({ theme, color }) =>
+    color ? theme.color[color] : theme.color.gray};
   font-family: ${({ theme, isSerif }) =>
     isSerif ? theme.fontFamily.serif : theme.fontFamily.sansSerif};
   font-size: ${({ theme, size }) =>

@@ -1,13 +1,11 @@
-import styled from "styled-components";
-
 import {
   About,
   Contact,
   Footer,
   Hero,
+  LineBreak,
   Dope,
-  Projects,
-  Section
+  Projects
 } from "components";
 
 const Landing = () => {
@@ -15,8 +13,11 @@ const Landing = () => {
     <>
       <Hero />
       <Dope />
+      <LineBreak />
       <About />
+      <LineBreak />
       <Projects />
+      <LineBreak />
       <Contact />
       <Footer />
     </>
