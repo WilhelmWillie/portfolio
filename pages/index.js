@@ -1,3 +1,5 @@
+import Head from "next/head";
+
 import {
   About,
   Contact,
@@ -11,6 +13,11 @@ import {
 const Landing = () => {
   return (
     <>
+      <Head>
+        <title>Wilhelm Willie | code + design + product</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
+
       <Hero />
       <Dope />
       <LineBreak />
