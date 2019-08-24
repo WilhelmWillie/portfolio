@@ -19,6 +19,7 @@ const theme = {
   color: {
     gray: "#545454",
     white: "#FFFFFF",
+    lightGray: "#A2A2A2",
     grayBg: "#E0E0E0"
   }
 };

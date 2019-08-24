@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 import Section from "./Section";
-import Text from "./Text";
+import Text, { Body } from "./Text";
 
 import headshot from "../assets/headshot.jpg";
 
@@ -32,7 +32,7 @@ export default () => (
         Full stack engineer with a passion for building great products
       </BlurbTitle>
 
-      <Blurb weight="light" tag="p">
+      <Body>
         I'm a tinkerer, a creative, and a builder. I enjoy working across the
         stack to produce great digital experiences from concept to production.
         I'm always down to talk about code, design, and product. Currently, I'm
@@ -41,7 +41,7 @@ export default () => (
         mockups in Sketch and building them out using my favorite frameworks!
         Feel free to contact me if you have any opportunities you'd like to
         discuss or if you just want to talk tech!
-      </Blurb>
+      </Body>
     </Main>
   </Section>
 );
@@ -85,8 +85,4 @@ const Detail = styled(Text)`
 const BlurbTitle = styled(Text)`
   line-height: 1.25em;
   margin-bottom: 12px;
-`;
-
-const Blurb = styled(Text)`
-  line-height: 1.56em;
 `;

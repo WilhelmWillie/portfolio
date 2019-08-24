@@ -7,7 +7,7 @@ export default () => (
   <Backdrop>
     <Section>
       <Container>
-        <Text tag="p" isSerif>
+        <Text tag="p" color="white">
           Wilhelm Willie &copy; 2019. Fight On.
         </Text>
       </Container>
@@ -16,7 +16,7 @@ export default () => (
 );
 
 const Backdrop = styled.div`
-  background-color: ${({ theme }) => theme.color.grayBg};
+  background-color: #232185;
 `;
 
 const Container = styled.div`
