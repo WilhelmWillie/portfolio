@@ -10,7 +10,7 @@ const theme = {
     big: "32px",
     huge: "36px",
     large: "42px",
-    max: "52px"
+    max: "64px"
   },
   fontWeight: {
     light: "300",

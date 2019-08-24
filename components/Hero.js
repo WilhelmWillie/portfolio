@@ -1,8 +1,6 @@
 import styled from "styled-components";
 
 import Text from "./Text";
-import Developer from "../assets/developer.svg";
-import DotGrid from "../assets/dot_grid.svg";
 
 export default () => (
   <Hero>
@@ -11,36 +9,31 @@ export default () => (
         <Text tag="h1" size="max" isSerif color="white">
           Wilhelm Willie
         </Text>
-        <Text tag="h2" size="big" weight="light" color="white">
-          code + design + product
-        </Text>
+        <HeroSubheader tag="h2" size="big" weight="light" color="white">
+          💻 code 🎨 design 🚀 product
+        </HeroSubheader>
       </HeroText>
-      <HeroViz>
-        <DotGridBG src={DotGrid} />
-        <DeveloperHexagon src={Developer} />
-      </HeroViz>
     </HeroContainer>
   </Hero>
 );
 
 const Hero = styled.div`
   width: 100%;
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 140px;
+  padding-bottom: 140px;
   background: #f27fbe;
   text-align: center;
-  background: #fc5c7d; /* fallback for old browsers */
+  background: #6037a7; /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to right,
-    #6a82fb,
-    #fc5c7d
+    #6037a7,
+    #283c7a
   ); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(
     to right,
-    #6a82fb,
-    #fc5c7d
+    #6037a7,
+    #283c7a
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  border-radius: 0 0 32px 32px;
 `;
 
 const HeroContainer = styled.div`
@@ -52,26 +45,10 @@ const HeroContainer = styled.div`
 `;
 
 const HeroText = styled.div`
-  flex-basis: 50%;
-  text-align: left;
-`;
-
-const HeroViz = styled.div`
-  position: relative;
-  flex-basis: 50%;
-  text-align: right;
-  display: flex;
-  align-items: center;
   width: 100%;
+  text-align: center;
 `;
 
-const DotGridBG = styled.img`
-  margin-left: auto;
-`;
-
-const DeveloperHexagon = styled.img`
-  position: absolute;
-  left: 50px;
-  top: 50%;
-  margin-top: -127px;
+const HeroSubheader = styled(Text)`
+  margin-top: 16px;
 `;
