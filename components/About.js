@@ -5,6 +5,12 @@ import Text, { Body } from "./Text";
 
 import headshot from "../assets/headshot.jpg";
 
+const renderSkills = () => {
+  const skills = ["C++", "JavaScript", "Python"];
+
+  return skills.map(skill => <Skill key={`skill_${skill}`}>{skill}</Skill>);
+};
+
 export default () => (
   <AboutSection>
     <Sidebar>
@@ -12,9 +18,9 @@ export default () => (
         <Headshot src={headshot} />
       </div>
 
-      <Name tag="h3" size="medium" isSerif>
+      <SubHeader tag="h3" size="medium" isSerif>
         Wilhelm Willie
-      </Name>
+      </SubHeader>
 
       <Detail tag="h4" weight="light" size="small">
         🎓 University of Southern California
@@ -42,6 +48,12 @@ export default () => (
         Feel free to contact me if you have any opportunities you'd like to
         discuss or if you just want to talk tech!
       </Body>
+
+      <SubHeader tag="h3" size="medium" isSerif>
+        Skills
+      </SubHeader>
+
+      <Skills>{renderSkills()}</Skills>
     </Main>
   </AboutSection>
 );
@@ -87,8 +99,8 @@ const Headshot = styled.img`
   height: auto;
 `;
 
-const Name = styled(Text)`
-  margin: 16px 0;
+const SubHeader = styled(Text)`
+  margin: 32px 0 16px;
 `;
 
 const Detail = styled(Text)`
@@ -99,4 +111,17 @@ const Detail = styled(Text)`
 const BlurbTitle = styled(Text)`
   line-height: 1.25em;
   margin-bottom: 12px;
+`;
+
+const Skills = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+`;
+
+const Skill = styled.div`
+  background: #ededed;
+  border-radius: 8px;
+  margin-right: 16px;
+  padding: 16px 24px;
+  font-size: 14px;
 `;
