@@ -21,6 +21,18 @@ const theme = {
     white: "#FFFFFF",
     lightGray: "#A2A2A2",
     grayBg: "#E0E0E0"
+  },
+  media: {
+    tablet: style => `
+      @media screen and (max-width: 768px) {
+        ${style}
+      }
+    `,
+    mobile: style => `
+      @media screen and (max-width: 425px) {
+        ${style}
+      }
+    `
   }
 };
 

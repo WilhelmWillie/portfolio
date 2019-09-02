@@ -1,10 +1,19 @@
 import styled from "styled-components";
 
-const Text = ({ tag, size, weight, isSerif, children, ...props }) => {
+const Text = ({
+  tag,
+  size,
+  mobileSize,
+  weight,
+  isSerif,
+  children,
+  ...props
+}) => {
   return (
     <StyledText
       as={tag}
       size={size}
+      mobileSize={mobileSize}
       weight={weight}
       isSerif={isSerif}
       {...props}
@@ -26,6 +35,7 @@ const SectionTitle = styled(Text).attrs({
 const SectionHeader = styled(Text).attrs({
   tag: "h2",
   size: "large",
+  mobileSize: "medium",
   isSerif: true
 })`
   margin-top: 18px;
@@ -47,6 +57,13 @@ const StyledText = styled.div`
     size ? theme.fontSize[size] : theme.fontSize.default};
   font-weight: ${({ theme, weight }) =>
     weight ? theme.fontWeight[weight] : theme.fontWeight.default};
+
+  ${({ theme, mobileSize }) => theme.media.mobile`
+    ${() => {
+      console.log(mobileSize);
+    }}
+    ${mobileSize && `font-size: ${{ mobileSize }}`};
+  `}
 `;
 
 export { SectionTitle, SectionHeader, Body };

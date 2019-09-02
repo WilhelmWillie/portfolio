@@ -6,7 +6,7 @@ import Text, { Body } from "./Text";
 import headshot from "../assets/headshot.jpg";
 
 export default () => (
-  <Section>
+  <AboutSection>
     <Sidebar>
       <div>
         <Headshot src={headshot} />
@@ -43,7 +43,7 @@ export default () => (
         discuss or if you just want to talk tech!
       </Body>
     </Main>
-  </Section>
+  </AboutSection>
 );
 
 const Button = styled.a`
@@ -52,12 +52,26 @@ const Button = styled.a`
   border-radius: 8px;
 `;
 
+const AboutSection = styled(Section)`
+  ${({ theme }) => theme.media.tablet`
+    > div {
+      flex-direction: column;
+    }
+  `}
+`;
+
 const Sidebar = styled.div`
   display: flex;
   flex-basis: 30%;
   flex-direction: column;
   padding: 0 16px;
   text-align: center;
+
+  ${({ theme }) => theme.media.tablet`
+    width: 75%;
+    margin: 0 auto;
+    margin-bottom: 32px;
+  `}
 `;
 
 const Main = styled.div`
