@@ -1,5 +1,6 @@
 import styled from "styled-components";
 
+import Button from "./Button";
 import Section from "./Section";
 import Text, { Body } from "./Text";
 
@@ -31,6 +32,10 @@ export default () => (
       <Detail tag="h4" weight="light" size="small">
         ⏰ Class of 2020
       </Detail>
+
+      <StyledButton>GitHub</StyledButton>
+      <StyledButton>LinkedIn</StyledButton>
+      <StyledButton>Resume</StyledButton>
     </Sidebar>
 
     <Main>
@@ -57,12 +62,6 @@ export default () => (
     </Main>
   </AboutSection>
 );
-
-const Button = styled.a`
-  padding: 15px;
-  background: #1fde8f;
-  border-radius: 8px;
-`;
 
 const AboutSection = styled(Section)`
   ${({ theme }) => theme.media.tablet`
@@ -106,6 +105,10 @@ const SubHeader = styled(Text)`
 const Detail = styled(Text)`
   margin-bottom: 16px;
   text-align: left;
+`;
+
+const StyledButton = styled(Button)`
+  margin-bottom: 16px;
 `;
 
 const BlurbTitle = styled(Text)`
