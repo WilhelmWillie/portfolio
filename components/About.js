@@ -1,82 +1,126 @@
 import styled from "styled-components";
 
-import Button from "./Button";
 import Section from "./Section";
 import Text, { Body } from "./Text";
 
-import headshot from "../assets/headshot.jpg";
-
 const renderSkills = () => {
-  const skills = ["C++", "JavaScript", "Python"];
+  const skills = [
+    "Javascript",
+    "Java",
+    "Python",
+    "C++",
+    "Ruby",
+    "SQL",
+    "HTML",
+    "CSS",
+    "Node.js",
+    "Rails",
+    "Flask",
+    "Express",
+    "React",
+    "React Native",
+    "Angular",
+    "MongoDB",
+    "MySQL",
+    "Agile Methodologies",
+    "UX/UI Design",
+    "Design Thinking",
+    "Project Management"
+  ];
 
-  return skills.map(skill => <Skill key={`skill_${skill}`}>{skill}</Skill>);
+  return skills.map(skill => (
+    <Skill key={`skill_${skill.toLowerCase()}`}>{skill}</Skill>
+  ));
 };
 
 export default () => (
-  <AboutSection>
-    <Sidebar>
-      <div>
-        <Headshot src={headshot} />
-      </div>
-
-      <SubHeader tag="h3" size="medium" isSerif>
-        Wilhelm Willie
+  <Section>
+    <TitleSection>
+      <Header tag="h2" size="medium">
+        Full Stack Engineer
+      </Header>
+      <SubHeader tag="h3" size="medium" color="subHeader" italic>
+        Fueled By Soylent
       </SubHeader>
+    </TitleSection>
 
-      <Detail tag="h4" weight="light" size="small">
-        🎓 University of Southern California
-      </Detail>
-      <Detail tag="h4" weight="light" size="small">
-        📌 Los Angeles, CA
-      </Detail>
-      <Detail tag="h4" weight="light" size="small">
-        ⏰ Class of 2020
-      </Detail>
+    <Content>
+      <Sidebar>
+        <SubHeader tag="h3" size="medium" color="subHeader">
+          Education
+        </SubHeader>
 
-      <StyledButton>GitHub</StyledButton>
-      <StyledButton>LinkedIn</StyledButton>
-      <StyledButton>Resume</StyledButton>
-    </Sidebar>
+        <Body>
+          Stephen Decatur Elementary
+          <br />
+          <em>Class of 2009</em>
+          <br />
+          <br />
+          University of Southern California
+          <br />
+          <em>Class of 2020</em>
+        </Body>
 
-    <Main>
-      <BlurbTitle tag="h2" size="big" isSerif>
-        Full stack engineer with a passion for building great products
-      </BlurbTitle>
+        <SubHeader tag="h3" size="medium" color="subHeader">
+          Places
+        </SubHeader>
 
-      <Body>
-        I'm a tinkerer, a creative, and a builder. I enjoy working across the
-        stack to produce great digital experiences from concept to production.
-        I'm always down to talk about code, design, and product. Currently, I'm
-        interested in exploring the intersection between software engineering
-        and user experience design. Catch me in my room building wireframes and
-        mockups in Sketch and building them out using my favorite frameworks!
-        Feel free to contact me if you have any opportunities you'd like to
-        discuss or if you just want to talk tech!
-      </Body>
+        <Body>
+          <b>Origin:</b> Baguio, Philippines
+          <br />
+          <b>Home:</b> Jacksonville, Florida
+          <br />
+          <b>Now:</b> Los Angeles, CA
+          <br />
+          <b>Future:</b> San Francisco, CA
+          <br />
+        </Body>
 
-      <SubHeader tag="h3" size="medium" isSerif>
-        Skills
-      </SubHeader>
+        <SubHeader tag="h3" size="medium" color="subHeader">
+          Fun Fact
+        </SubHeader>
 
-      <Skills>{renderSkills()}</Skills>
-    </Main>
-  </AboutSection>
+        <Body>I have a typing speed of 140 WPM.</Body>
+      </Sidebar>
+
+      <Main>
+        <Body>
+          I'm a tinkerer, a creative, and a builder. I enjoy working across the
+          stack to produce great digital experiences from concept to production.
+          I'm always down to talk about code, design, and product. Currently,
+          I'm interested in exploring the intersection between software
+          engineering and user experience design. Catch me in my room building
+          wireframes and mockups in Sketch and building them out using my
+          favorite frameworks! Feel free to contact me if you have any
+          opportunities you'd like to discuss or if you just want to talk tech!
+        </Body>
+
+        <SkillsHeader tag="h3" size="medium" color="subHeader">
+          Skills
+        </SkillsHeader>
+
+        <Skills>{renderSkills()}</Skills>
+      </Main>
+    </Content>
+  </Section>
 );
 
-const AboutSection = styled(Section)`
-  ${({ theme }) => theme.media.tablet`
-    > div {
-      flex-direction: column;
-    }
-  `}
+const TitleSection = styled.div`
+  width: 100%;
+  text-align: center;
+  margin-bottom: 32px;
+`;
+
+const Content = styled.div`
+  display: flex;
+  flex-direction: row;
 `;
 
 const Sidebar = styled.div`
   display: flex;
-  flex-basis: 30%;
+  flex-basis: 35%;
   flex-direction: column;
   padding: 0 16px;
-  text-align: center;
 
   ${({ theme }) => theme.media.tablet`
     width: 75%;
@@ -87,33 +131,28 @@ const Sidebar = styled.div`
 
 const Main = styled.div`
   display: flex;
-  flex-basis: 70%;
+  flex-basis: 65%;
   flex-direction: column;
   padding: 0 16px;
 `;
 
-const Headshot = styled.img`
-  border-radius: 50%;
-  width: 100%;
-  height: auto;
+const Header = styled(Text)`
+  text-transform: uppercase;
+  font-weight: ${({ theme }) => theme.fontWeight.black};
+  font-size: ${({ theme }) => theme.fontSize.large};
 `;
 
 const SubHeader = styled(Text)`
-  margin: 32px 0 16px;
+  margin-top: 16px;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  font-weight: ${({ theme }) => theme.fontWeight.bold};
+  font-size: ${({ theme }) => theme.fontSize.medium};
 `;
 
-const Detail = styled(Text)`
-  margin-bottom: 16px;
-  text-align: left;
-`;
-
-const StyledButton = styled(Button)`
-  margin-bottom: 16px;
-`;
-
-const BlurbTitle = styled(Text)`
-  line-height: 1.25em;
-  margin-bottom: 12px;
+const SkillsHeader = styled(SubHeader)`
+  margin-bottom: 24px;
+  margin-top: 24px;
 `;
 
 const Skills = styled.div`
@@ -122,9 +161,11 @@ const Skills = styled.div`
 `;
 
 const Skill = styled.div`
-  background: #ededed;
+  background: ${({ theme }) => theme.color.skill};
+  color: ${({ theme }) => theme.color.white};
   border-radius: 8px;
-  margin-right: 16px;
-  padding: 16px 24px;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  padding: 8px 18px;
   font-size: 14px;
 `;

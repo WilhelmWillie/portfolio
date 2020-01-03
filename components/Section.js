@@ -17,4 +17,5 @@ const Container = styled.div`
   margin-left: auto;
   margin-right: auto;
   justify-content: space-between;
+  flex-direction: column;
 `;

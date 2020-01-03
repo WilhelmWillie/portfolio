@@ -5,7 +5,7 @@ const GlobalStyles = createGlobalStyle`
   ${reset}
 
   body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: ${({ theme }) => theme.fontFamily.sansSerif};
   }
 `;
 

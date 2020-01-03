@@ -1,26 +1,35 @@
 const theme = {
   fontFamily: {
     serif: `'Arbutus Slab', serif`,
-    sansSerif: `'Open Sans', sans-serif`
+    sansSerif: `'Lato', sans-serif`
   },
   fontSize: {
     small: "16px",
-    default: "18px",
+    default: "20px",
     medium: "24px",
     big: "32px",
     huge: "36px",
     large: "42px",
-    max: "64px"
+    xlarge: "52px",
+    max: "64px",
+    megaMax: "85px"
   },
   fontWeight: {
     light: "300",
-    default: "400"
+    default: "400",
+    bold: "700",
+    black: "900"
   },
   color: {
     gray: "#545454",
     white: "#FFFFFF",
     lightGray: "#A2A2A2",
-    grayBg: "#E0E0E0"
+    grayBg: "#E0E0E0",
+    border: "#DFDFDF",
+    boldHeader: "#3C3C3C",
+    subHeader: "#767676",
+    emphasis: "#C55353",
+    skill: "#FC8686"
   },
   media: {
     tablet: style => `

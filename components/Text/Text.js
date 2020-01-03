@@ -35,8 +35,7 @@ const SectionTitle = styled(Text).attrs({
 const SectionHeader = styled(Text).attrs({
   tag: "h2",
   size: "large",
-  mobileSize: "medium",
-  isSerif: true
+  mobileSize: "medium"
 })`
   margin-top: 18px;
 `;
@@ -57,6 +56,7 @@ const StyledText = styled.div`
     size ? theme.fontSize[size] : theme.fontSize.default};
   font-weight: ${({ theme, weight }) =>
     weight ? theme.fontWeight[weight] : theme.fontWeight.default};
+  font-style: ${({ theme, italic }) => (italic ? "italic" : "auto")};
 
   ${({ theme, mobileSize }) => theme.media.mobile`
     ${() => {
@@ -64,6 +64,14 @@ const StyledText = styled.div`
     }}
     ${mobileSize && `font-size: ${{ mobileSize }}`};
   `}
+
+  b {
+    font-weight: ${({ theme }) => theme.fontWeight.bold};
+  }
+
+  em {
+    font-style: italic;
+  }
 `;
 
 export { SectionTitle, SectionHeader, Body };
