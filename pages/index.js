@@ -1,5 +1,9 @@
 import Head from "next/head";
 
+import Bio from "components/Bio";
+import Footer from "components/Footer";
+import Hero from "components/Hero";
+
 const Home = () => {
   return (
     <>
@@ -8,7 +12,9 @@ const Home = () => {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
 
-      <h1>Hello world</h1>
+      <Hero />
+      <Bio />
+      <Footer />
     </>
   );
 };
