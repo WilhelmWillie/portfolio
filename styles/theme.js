@@ -45,7 +45,7 @@ const theme = {
   },
   layout: {
     width: 1024,
-    sectionPadding: 64,
+    sectionPadding: 88,
   },
 };
 
