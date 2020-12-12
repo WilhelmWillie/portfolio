@@ -1,8 +1,6 @@
 import Head from "next/head";
 
-import { About, Hero, Dope } from "components";
-
-const Landing = () => {
+const Home = () => {
   return (
     <>
       <Head>
@@ -10,11 +8,9 @@ const Landing = () => {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
 
-      <Hero />
-      <Dope />
-      <About />
+      <h1>Hello world</h1>
     </>
   );
 };
 
-export default Landing;
+export default Home;

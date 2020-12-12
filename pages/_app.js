@@ -19,14 +19,12 @@ class PortfolioApp extends App {
     const { Component, pageProps } = this.props;
 
     return (
-      <Container>
-        <ThemeProvider theme={theme}>
-          <>
-            <GlobalStyles />
-            <Component {...pageProps} />
-          </>
-        </ThemeProvider>
-      </Container>
+      <ThemeProvider theme={theme}>
+        <>
+          <GlobalStyles />
+          <Component {...pageProps} />
+        </>
+      </ThemeProvider>
     );
   }
 }
