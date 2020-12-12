@@ -1,7 +1,11 @@
+import Container from "./layout/Container";
+
 const Footer = () => {
   return (
     <div>
-      <p>Wilhelm Willie</p>
+      <Container>
+        <p>Wilhelm Willie</p>
+      </Container>
     </div>
   );
 };

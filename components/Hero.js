@@ -1,8 +1,12 @@
+import Container from "./layout/Container";
+
 const Hero = () => {
   return (
     <div>
-      <h1>Wilhelm Willie</h1>
-      <p>Building things 🚀</p>
+      <Container>
+        <h1>Wilhelm Willie</h1>
+        <p>Building things 🚀</p>
+      </Container>
     </div>
   );
 };
