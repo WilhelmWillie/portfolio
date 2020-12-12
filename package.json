@@ -20,19 +20,19 @@
   },
   "homepage": "https://github.com/WilhelmWillie/portfolio#readme",
   "dependencies": {
-    "next": "^9.0.3",
+    "next": "^10.0.3",
     "next-images": "^1.1.2",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "styled-components": "^4.3.2",
-    "styled-reset": "^3.0.0"
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "styled-components": "^5.2.1",
+    "styled-reset": "^4.3.3"
   },
   "devDependencies": {
     "babel-plugin-styled-components": "^1.10.6",
-    "husky": "^3.0.2",
-    "prettier": "^1.18.2",
+    "husky": "^4.3.5",
+    "prettier": "^2.2.1",
     "prettier-quick": "^0.0.5",
-    "pretty-quick": "^1.11.1"
+    "pretty-quick": "^3.1.0"
   },
   "husky": {
     "hooks": {
