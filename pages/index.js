@@ -3,6 +3,7 @@ import Head from "next/head";
 import Bio from "components/Bio";
 import Footer from "components/Footer";
 import Hero from "components/Hero";
+import Work from "components/Work";
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
 
       <Hero />
       <Bio />
+      <Work />
       <Footer />
     </>
   );
