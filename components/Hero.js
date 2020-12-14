@@ -21,7 +21,7 @@ const Hero = () => {
         <SocialLink
           href="https://www.twitter.com/wilhelm_willie"
           target="_blank"
-          noreferrer
+          rel="noreferrer"
         >
           <img src="/twitter.svg" alt="Twitter Icon" />
         </SocialLink>
@@ -29,7 +29,7 @@ const Hero = () => {
         <SocialLink
           href="https://www.github.com/wilhelmwillie"
           target="_blank"
-          noreferrer
+          rel="noreferrer"
         >
           <img src="/github.svg" alt="GitHub Icon" />
         </SocialLink>
@@ -37,7 +37,7 @@ const Hero = () => {
         <SocialLink
           href="https://www.linkedin.com/in/wilhelmwillie"
           target="_blank"
-          noreferrer
+          rel="noreferrer"
         >
           <img src="/linkedIn.svg" alt="LinkedIn Icon" />
         </SocialLink>

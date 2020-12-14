@@ -26,6 +26,10 @@ const typographyStyles = css`
     color: #3c4784;
     font-weight: 700;
   }
+
+  a {
+    color: #898989;
+  }
 `;
 
 export default typographyStyles;
