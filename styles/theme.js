@@ -1,7 +1,7 @@
 const theme = {
   fontFamily: {
-    serif: `'Arbutus Slab', serif`,
-    sansSerif: `'Lato', sans-serif`,
+    serif: `'Merriweather', serif`,
+    slab: `'Roboto Slab', serif`,
   },
   fontSize: {
     small: "16px",

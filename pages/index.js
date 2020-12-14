@@ -8,7 +8,7 @@ const Home = () => {
   return (
     <>
       <Head>
-        <title>Wilhelm Willie | Code, Design, and Product</title>
+        <title>Wilhelm Willie | Building things 🚀</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
 

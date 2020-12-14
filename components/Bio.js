@@ -24,7 +24,7 @@ const Bio = () => {
 };
 
 const BioWrapper = styled.div`
-  padding: ${(p) => p.theme.layout.sectionPadding}px;
+  padding: ${(p) => p.theme.layout.sectionPadding}px 0;
 `;
 
 export default Bio;
