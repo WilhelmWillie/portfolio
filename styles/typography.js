@@ -27,6 +27,12 @@ const typographyStyles = css`
     font-weight: 700;
   }
 
+  h3 {
+    font-size: 24px;
+    font-weight: 500;
+    color: #58608c;
+  }
+
   a {
     color: #898989;
   }

@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 import Container from "./layout/Container";
+import Card from "./Card";
 
 const Work = () => {
   return (
@@ -13,6 +14,44 @@ const Work = () => {
           out some of the personal projects I’ve worked on over the years
           ranging from Twitter bots to web apps to beyond.
         </Blurb>
+
+        <CardGrid>
+          <Card
+            title="Project Name"
+            description="Lorem ipsum dolor sit amet consectetur"
+            link="https://github.com/wilhelmwillie"
+          />
+
+          <Card
+            title="Project Name"
+            description="Lorem ipsum dolor sit amet consectetur"
+            link="https://github.com/wilhelmwillie"
+          />
+
+          <Card
+            title="Project Name"
+            description="Lorem ipsum dolor sit amet consectetur"
+            link="https://github.com/wilhelmwillie"
+          />
+
+          <Card
+            title="Project Name"
+            description="Lorem ipsum dolor sit amet consectetur"
+            link="https://github.com/wilhelmwillie"
+          />
+
+          <Card
+            title="Project Name"
+            description="Lorem ipsum dolor sit amet consectetur"
+            link="https://github.com/wilhelmwillie"
+          />
+
+          <Card
+            title="Project Name"
+            description="Lorem ipsum dolor sit amet consectetur"
+            link="https://github.com/wilhelmwillie"
+          />
+        </CardGrid>
       </Container>
     </WorkWrapper>
   );
@@ -32,6 +71,13 @@ const Heading = styled.h2`
 const Blurb = styled.p`
   max-width: 800px;
   margin: 0 auto;
+`;
+
+const CardGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+  margin-top: 54px;
 `;
 
 export default Work;
