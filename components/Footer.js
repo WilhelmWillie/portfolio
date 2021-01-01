@@ -3,13 +3,15 @@ import styled from "styled-components";
 import Container from "./layout/Container";
 
 const Footer = () => {
+  const YEAR = new Date().getFullYear();
+
   return (
     <FooterWrapper>
       <Container>
         <p>
           Wilhelm Willie.
           <br />
-          &copy; 2020.
+          &copy; {YEAR}.
         </p>
 
         <p>
