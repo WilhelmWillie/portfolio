@@ -9,7 +9,12 @@ const Hero = () => {
 
       <Container>
         <Content>
-          <Headshot src="/headshot.jpg" alt="Headshot of Wilhelm Willie" />
+          <Headshot
+            src="/headshot.jpg"
+            alt="Headshot of Wilhelm Willie"
+            width="76"
+            height="76"
+          />
           <Text>
             <h1>Wilhelm Willie</h1>
             <p>Building things 🚀</p>
@@ -23,7 +28,7 @@ const Hero = () => {
           target="_blank"
           rel="noreferrer"
         >
-          <img src="/twitter.svg" alt="Twitter Icon" />
+          <img src="/twitter.svg" alt="Twitter Icon" width="32" height="32" />
         </SocialLink>
 
         <SocialLink
@@ -31,7 +36,7 @@ const Hero = () => {
           target="_blank"
           rel="noreferrer"
         >
-          <img src="/github.svg" alt="GitHub Icon" />
+          <img src="/github.svg" alt="GitHub Icon" width="32" height="32" />
         </SocialLink>
 
         <SocialLink
@@ -39,7 +44,7 @@ const Hero = () => {
           target="_blank"
           rel="noreferrer"
         >
-          <img src="/linkedIn.svg" alt="LinkedIn Icon" />
+          <img src="/linkedIn.svg" alt="LinkedIn Icon" width="32" height="32" />
         </SocialLink>
       </SocialLinks>
     </HeroWrapper>
