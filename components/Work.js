@@ -78,8 +78,14 @@ const WORK_ITEMS = [
 ];
 
 const Work = () => {
-  const Cards = WORK_ITEMS.map(({ title, description, link, image }) => (
-    <Card title={title} description={description} link={link} image={image} />
+  const Cards = WORK_ITEMS.map(({ title, description, link, image }, index) => (
+    <Card
+      title={title}
+      description={description}
+      link={link}
+      image={image}
+      key={`card-${index}`}
+    />
   ));
 
   return (
