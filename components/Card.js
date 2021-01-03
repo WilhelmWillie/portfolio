@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const Card = ({ title, description, link }) => {
+const Card = ({ title, description, link, image }) => {
   return (
     <CardWrapper>
       <CardHeader>
@@ -8,7 +8,7 @@ const Card = ({ title, description, link }) => {
         <Description>{description}</Description>
       </CardHeader>
 
-      <CardImage src="http://via.placeholder.com/800x600" />
+      <CardImage src={image} />
 
       <CardLink href={link}>View Project</CardLink>
     </CardWrapper>
@@ -16,6 +16,8 @@ const Card = ({ title, description, link }) => {
 };
 
 const CardWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
   background: #ffffff;
   border: 1px solid #dcdcdc;
   border-radius: 6px;
@@ -25,6 +27,7 @@ const CardWrapper = styled.div`
 
 const CardHeader = styled.div`
   padding: 26px;
+  flex-grow: 1;
 `;
 
 const Description = styled.p`
