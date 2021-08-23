@@ -6,41 +6,20 @@ const Bio = () => {
   return (
     <BioWrapper>
       <BioContainer>
-        <IntroP>I'm Wilhelm Willie - a San Francisco based web engineer</IntroP>
+        <IntroP>
+          Hey! I'm Wilhelm Willie - a San Francisco based engineer
+        </IntroP>
         <p>
-          I’m a passionate builder of products, a lover of technology, and a
-          sportsball enthusiast. Currently interested in crypto/blockchain,
-          design systems, and UI/UX design.
+          TLDR: I'm a software engineer at Coinbase, a University of Southern
+          California graduate. I did some internships at some great places
+          (Coinbase, Salesforce, McKinsey Digital). I love technology, building
+          products, and learning new things.
         </p>
+
         <p>
-          Currently @{" "}
-          <a href="https://www.coinbase.com" target="_blank" rel="noreferrer">
-            Coinbase
-          </a>
-          , helping build an open financial system.
-        </p>
-        <p>
-          Previously: CS & Biz @{" "}
-          <a href="https://www.usc.edu" target="_blank" rel="noreferrer">
-            USC
-          </a>{" "}
-          (c/o 2020),{" "}
-          <a href="https://www.coinbase.com" target="_blank" rel="noreferrer">
-            Coinbase
-          </a>{" "}
-          intern (2019),{" "}
-          <a href="https://www.salesforce.com" target="_blank" rel="noreferrer">
-            Salesforce
-          </a>{" "}
-          intern (2018),{" "}
-          <a
-            href="https://www.mckinsey.com/business-functions/mckinsey-digital/careers/product-engineering"
-            target="_blank"
-            rel="noreferrer"
-          >
-            McKinsey Digital
-          </a>{" "}
-          intern (2017).
+          I'm interested in crypto, finance, consumer social, sports, and the
+          intersection of media and technology. Open to chat about all that and
+          more, my DMs and inbox are open!
         </p>
       </BioContainer>
     </BioWrapper>
@@ -53,6 +32,10 @@ const BioWrapper = styled.div`
 
 const BioContainer = styled(Container)`
   max-width: 800px;
+
+  p {
+    text-transform: lowercase;
+  }
 `;
 
 const IntroP = styled.p`
