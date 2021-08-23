@@ -1,20 +1,23 @@
 import Head from "next/head";
 
-import { About, Hero, Dope } from "components";
+import Bio from "components/Bio";
+import Footer from "components/Footer";
+import Hero from "components/Hero";
+import Work from "components/Work";
 
-const Landing = () => {
+const Home = () => {
   return (
     <>
       <Head>
-        <title>Wilhelm Willie | Code, Design, and Product</title>
+        <title>Wilhelm Willie | Building things 🚀</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
 
       <Hero />
-      <Dope />
-      <About />
+      <Bio />
+      <Footer />
     </>
   );
 };
 
-export default Landing;
+export default Home;

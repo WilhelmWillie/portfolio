@@ -1,7 +1,7 @@
 const theme = {
   fontFamily: {
-    serif: `'Arbutus Slab', serif`,
-    sansSerif: `'Lato', sans-serif`
+    serif: `'Merriweather', serif`,
+    slab: `'Roboto Slab', serif`,
   },
   fontSize: {
     small: "16px",
@@ -12,13 +12,13 @@ const theme = {
     large: "42px",
     xlarge: "52px",
     max: "64px",
-    megaMax: "85px"
+    megaMax: "85px",
   },
   fontWeight: {
     light: "300",
     default: "400",
     bold: "700",
-    black: "900"
+    black: "900",
   },
   color: {
     gray: "#545454",
@@ -29,20 +29,24 @@ const theme = {
     boldHeader: "#3C3C3C",
     subHeader: "#767676",
     emphasis: "#C55353",
-    skill: "#FC8686"
+    skill: "#FC8686",
   },
   media: {
-    tablet: style => `
+    tablet: (style) => `
       @media screen and (max-width: 768px) {
         ${style}
       }
     `,
-    mobile: style => `
+    mobile: (style) => `
       @media screen and (max-width: 425px) {
         ${style}
       }
-    `
-  }
+    `,
+  },
+  layout: {
+    width: 1024,
+    sectionPadding: 88,
+  },
 };
 
 export default theme;

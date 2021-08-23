@@ -1,5 +1,5 @@
 import React from "react";
-import App, { Container } from "next/app";
+import App from "next/app";
 import { ThemeProvider } from "styled-components";
 
 import { GlobalStyles, theme } from "../styles";
@@ -19,14 +19,12 @@ class PortfolioApp extends App {
     const { Component, pageProps } = this.props;
 
     return (
-      <Container>
-        <ThemeProvider theme={theme}>
-          <>
-            <GlobalStyles />
-            <Component {...pageProps} />
-          </>
-        </ThemeProvider>
-      </Container>
+      <ThemeProvider theme={theme}>
+        <>
+          <GlobalStyles />
+          <Component {...pageProps} />
+        </>
+      </ThemeProvider>
     );
   }
 }
